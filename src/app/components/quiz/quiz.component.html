@@ -1,20 +1,26 @@
-<div *ngIf="!isCompleted">
-    <div *ngIf="questions.length > 0">
-      <h2>{{ questions[currentQuestionIndex].question }}</h2>
-  
-      <div>
-        <button *ngFor="let selectedAnswer of shuffledAnswers" 
-                (click)="answer(selectedAnswer)">
-          {{ selectedAnswer }}
-        </button>
+<div style="height: 100vh; background: linear-gradient(135deg, #f0f8ff 0%, #d1e0ff 100%);">
+  <div *ngIf="!isCompleted" class="quiz-container">
+      <div class="question-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h2>
+        <p style="color: red;">Time Left: {{ timeLeft }} seconds</p> <!-- Timer display -->
       </div>
+        <h2>{{ questions[currentQuestionIndex].question }}</h2>
+    
+        <div class="answers-container">
+          <button *ngFor="let selectedAnswer of shuffledAnswers" 
+                  class="answer-button"
+                  (click)="answer(selectedAnswer)">
+            {{ selectedAnswer }}
+          </button>
+        </div>
+      </div>
+    </div> 
+    
+    <div *ngIf="isCompleted" class="quiz-completed-card">
+      <h2>Quiz Completed!</h2>
+      <p>Your final score is: {{ score }}/{{ questions.length }}</p>
+      <button (click)="restart()" class="restart-button">Restart</button>
     </div>
-    <p>Score: {{ score }}/{{ questions.length }}</p>
   </div>
-  
-  <div *ngIf="isCompleted">
-    <h2>Quiz Completed!</h2>
-    <p>Your final score is: {{ score }}/{{ questions.length }}</p>
-    <button (click)="restart()">Restart</button>
-  </div>
-  
+    

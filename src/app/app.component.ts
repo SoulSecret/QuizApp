@@ -35,7 +35,8 @@ export class AppComponent {
                           !this.router.url.includes('/music') &&
                           !this.router.url.includes('/animals') &&
                           !this.router.url.includes('/books') &&
-                          !this.router.url.includes('/sports');
+                          !this.router.url.includes('/sports') &&
+                          !this.router.url.includes('/ge');
       }
     });
   }

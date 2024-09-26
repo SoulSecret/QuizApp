@@ -9,6 +9,7 @@ import { MusicComponent } from './components/music/music.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { BooksComponent } from './components/books/books.component';
 import { SportsComponent } from './components/sports/sports.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 export const routes: Routes = [
     {path: 'history', component:HistoryComponent},
@@ -21,4 +22,5 @@ export const routes: Routes = [
     {path: 'animals', component:AnimalsComponent},
     {path: 'books', component:BooksComponent},
     {path: 'sports', component:SportsComponent},
+    {path: 'ge', component:QuizComponent},
 ];
