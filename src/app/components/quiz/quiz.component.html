@@ -1,0 +1,20 @@
+<div *ngIf="!isCompleted">
+    <div *ngIf="questions.length > 0">
+      <h2>{{ questions[currentQuestionIndex].question }}</h2>
+  
+      <div>
+        <button *ngFor="let selectedAnswer of shuffledAnswers" 
+                (click)="answer(selectedAnswer)">
+          {{ selectedAnswer }}
+        </button>
+      </div>
+    </div>
+    <p>Score: {{ score }}/{{ questions.length }}</p>
+  </div>
+  
+  <div *ngIf="isCompleted">
+    <h2>Quiz Completed!</h2>
+    <p>Your final score is: {{ score }}/{{ questions.length }}</p>
+    <button (click)="restart()">Restart</button>
+  </div>
+  

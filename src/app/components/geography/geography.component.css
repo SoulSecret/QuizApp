@@ -1,0 +1,113 @@
+/* styles.css or your component's CSS file */
+
+.quiz-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;          /* Full viewport height */
+    padding: 20px;          /* Padding around the container */
+  }
+  
+  .question-card {
+    background-color: white; /* Card background color */
+    border-radius: 8px;      /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    padding: 20px;           /* Padding inside the card */
+    text-align: center;      /* Center-aligns text */
+    width: 100%;             /* Full width for responsiveness */
+    max-width: 400px;       /* Maximum width for the card */
+  }
+  
+  .answers-container {
+    margin: 20px 0;         /* Margin for spacing */
+  }
+  
+  .answer-button {
+    display: inline-block;   /* Make buttons block-level */
+    background-color: rgb(63, 81, 181); /* Button background color */
+    color: white;           /* Text color */
+    border: none;           /* Remove border */
+    border-radius: 5px;    /* Rounded corners */
+    padding: 10px 20px;    /* Padding for buttons */
+    margin: 5px;           /* Margin between buttons */
+    cursor: pointer;        /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .answer-button:hover {
+    background-color: rgb(33, 150, 243); /* Change color on hover */
+  }
+  
+  .quiz-completed {
+    text-align: center;      /* Center-align the completed message */
+    padding: 20px;          /* Padding inside the completed section */
+  }
+  
+  .restart-button {
+    background-color: rgb(76, 175, 80); /* Restart button color */
+    color: white;                /* Text color */
+    border: none;                /* Remove border */
+    border-radius: 5px;         /* Rounded corners */
+    padding: 10px 20px;         /* Padding for restart button */
+    cursor: pointer;             /* Pointer cursor */
+  }
+  .quiz-completed-card {
+    display: flex;                    /* Use flexbox to center the content */
+    justify-content: center;          /* Center horizontally */
+    align-items: center;              /* Center vertically */
+    flex-direction: column;           /* Arrange items in a column */
+    max-width: 400px;                 /* Set a max width for the card */
+    margin: 40px auto;                /* Center the card in the middle of the screen */
+    background-color: white;          /* Card background color */
+    border-radius: 8px;               /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    padding: 20px;                    /* Padding inside the card */
+    text-align: center;               /* Center-align text */
+}
+
+.quiz-completed-card h2 {
+    margin-bottom: 20px;              /* Space below the heading */
+    font-size: 1.8rem;                /* Font size for the heading */
+}
+
+.quiz-completed-card p {
+    margin-bottom: 20px;              /* Space below the paragraph */
+    font-size: 1.2rem;                /* Font size for the paragraph */
+}
+
+.quiz-completed-card button {
+    padding: 10px 20px;               /* Button padding */
+    background-color: rgb(127, 127, 216); /* Button background color */
+    color: white;                     /* Button text color */
+    border: none;                     /* Remove border */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                  /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.quiz-completed-card button:hover {
+    background-color: rgb(100, 100, 180); /* Darker shade on hover */
+}
+.answers-container {
+    display: flex;                     /* Use flexbox */
+    flex-wrap: wrap;                  /* Allow items to wrap to the next line */
+    justify-content: center;           /* Center items horizontally */
+    align-items: center;
+}
+
+.answer-button {
+    flex: 0 0 48%;                    /* Set each button to take up 48% of the container */
+    margin: 5px;                      /* Space between buttons */
+    padding: 10px;                    /* Padding for the button */
+    background-color: rgb(127, 127, 216); /* Button background color */
+    color: white;                     /* Button text color */
+    border: none;                     /* Remove border */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                  /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.answer-button:hover {
+    background-color: rgb(100, 100, 180); /* Darker shade on hover */
+}
+
