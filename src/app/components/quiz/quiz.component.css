@@ -1,0 +1,56 @@
+select {
+    padding: 10px;                   /* Padding inside the select element */
+    border-radius: 5px;             /* Rounded corners */
+    border: 1px solid #ccc;         /* Border color */
+    background-color: white;        /* Background color */
+    color: rgb(2, 2, 2);            /* Text color */
+    font-family: 'Courier New', Courier, monospace; /* Font family */
+    font-size: 1rem;                /* Font size */
+    transition: border-color 0.2s;  /* Smooth transition for border color */
+  }
+  
+  select:focus {
+    outline: none;                  /* Remove default outline */
+    border-color: #3737a3;         /* Border color on focus */
+    box-shadow: 0 0 5px rgba(55, 55, 163, 0.5); /* Shadow on focus */
+  }
+    .centers{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+    }
+    .bg{
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px 15px 10px;
+      border-radius: 20px;
+      
+    }
+    .start-quiz-button {
+      padding: 10px 20px;               /* Padding for top/bottom and left/right */
+      border: none;                     /* Remove default border */
+      border-radius: 5px;               /* Rounded corners */
+      background-color: #3737a3;        /* Background color */
+      color: white;                     /* Text color */
+      font-family: 'Courier New', Courier, monospace; /* Font family */
+      font-size: 1rem;                  /* Font size */
+      cursor: pointer;                  /* Change cursor to pointer */
+      transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+      margin-top: 10px;                 /* Space above the button */
+    }
+    
+    .start-quiz-button:hover {
+      background-color: #2828a3;        /* Darker shade on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    }
+    
+    .start-quiz-button:focus {
+      outline: none;                     /* Remove default outline */
+      box-shadow: 0 0 5px rgba(55, 55, 163, 0.5); /* Shadow on focus */
+    }
+    

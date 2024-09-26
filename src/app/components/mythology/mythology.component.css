@@ -1,119 +1,126 @@
-/* styles.css or your component's CSS file */
-
 .quiz-container {
   font-family: 'Courier New', Courier;
   font-size: .8rem;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 100vh;          /* Full viewport height */
-    padding: 20px;          /* Padding around the container */
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;          
+    padding: 20px;          
   }
   
   .question-card {
-    background-color: white; /* Card background color */
-    border-radius: 8px;      /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-    padding: 20px;           /* Padding inside the card */
-    text-align: center;      /* Center-aligns text */
-    width: 100%;             /* Full width for responsiveness */
-    max-width: 400px;       /* Maximum width for the card */
+    background-color: white; 
+    border-radius: 8px;      
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;          
+    text-align: center;     
+    width: 100%;             
+    max-width: 700px;      
   }
   
   .answers-container {
-    margin: 20px 0;         /* Margin for spacing */
+    margin: 20px 0;        
   }
   
   .answer-button {
-    display: inline-block;   /* Make buttons block-level */
-    background-color: rgb(63, 81, 181); /* Button background color */
-    color: white;           /* Text color */
-    border: none;           /* Remove border */
-    border-radius: 5px;    /* Rounded corners */
-    padding: 10px 20px;    /* Padding for buttons */
-    margin: 5px;           /* Margin between buttons */
-    cursor: pointer;        /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    display: inline-block;   
+    background-color: rgb(63, 81, 181); 
+    color: white;           
+    border: none;           
+    border-radius: 5px;    
+    padding: 10px 20px;    
+    margin: 5px;           
+    cursor: pointer;       
+    transition: background-color 0.3s; 
   }
   
   .answer-button:hover {
-    background-color: rgb(33, 150, 243); /* Change color on hover */
+    background-color: rgb(33, 150, 243); 
   }
   
   .quiz-completed {
-    text-align: center;      /* Center-align the completed message */
-    padding: 20px;          /* Padding inside the completed section */
+    text-align: center;     
+    padding: 20px;          
   }
   
   .restart-button {
     font-family: 'Courier New', Courier, monospace;
     font-size: .8rem;
-    background-color: rgb(76, 175, 80); /* Restart button color */
-    color: white;                /* Text color */
-    border: none;                /* Remove border */
-    border-radius: 5px;         /* Rounded corners */
-    padding: 10px 20px;         /* Padding for restart button */
-    cursor: pointer;             /* Pointer cursor */
+    background-color: rgb(76, 175, 80); 
+    color: white;                
+    border: none;                
+    border-radius: 5px;        
+    padding: 10px 20px;        
+    cursor: pointer;            
   }
   .quiz-completed-card {
     font-family: 'Courier New', Courier, monospace;
     font-size: .8rem;
-    display: flex;                    /* Use flexbox to center the content */
-    justify-content: center;          /* Center horizontally */
-    align-items: center;              /* Center vertically */
-    flex-direction: column;           /* Arrange items in a column */
-    max-width: 400px;                 /* Set a max width for the card */
-    margin: 40px auto;                /* Center the card in the middle of the screen */
-    background-color: white;          /* Card background color */
-    border-radius: 8px;               /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-    padding: 20px;                    /* Padding inside the card */
-    text-align: center;               /* Center-align text */
+    display: flex;                    
+    justify-content: center;         
+    align-items: center;              
+    flex-direction: column;           
+    max-width: 400px;                 
+    margin: 40px auto;                
+    background-color: white;          
+    border-radius: 8px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;                    
+    text-align: center;               
 }
 
 .quiz-completed-card h2 {
-    margin-bottom: 20px;              /* Space below the heading */
-    font-size: 1.8rem;                /* Font size for the heading */
+    margin-bottom: 20px;              
+    font-size: 1.8rem;                
 }
 
 .quiz-completed-card p {
-    margin-bottom: 20px;              /* Space below the paragraph */
-    font-size: 1.2rem;                /* Font size for the paragraph */
+    margin-bottom: 20px;              
+    font-size: 1.2rem;               
 }
 
 .quiz-completed-card button {
-    padding: 10px 20px;               /* Button padding */
-    background-color: rgb(127, 127, 216); /* Button background color */
-    color: white;                     /* Button text color */
-    border: none;                     /* Remove border */
-    border-radius: 5px;              /* Rounded corners */
-    cursor: pointer;                  /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth background transition */
+    padding: 10px 20px;              
+    background-color: rgb(127, 127, 216); 
+    color: white;                    
+    border: none;                    
+    border-radius: 5px;              
+    cursor: pointer;                  
+    transition: background-color 0.3s; 
 }
 
 .quiz-completed-card button:hover {
-    background-color: rgb(100, 100, 180); /* Darker shade on hover */
+    background-color: rgb(100, 100, 180); 
 }
 .answers-container {
-    display: flex;                     /* Use flexbox */
-    flex-wrap: wrap;                  /* Allow items to wrap to the next line */
-    justify-content: center;           /* Center items horizontally */
+    display: flex;                     
+    flex-wrap: wrap;                  
+    justify-content: center;         
     align-items: center;
 }
 
 .answer-button {
-    flex: 0 0 48%;                    /* Set each button to take up 48% of the container */
-    margin: 5px;                      /* Space between buttons */
-    padding: 10px;                    /* Padding for the button */
-    background-color: rgb(127, 127, 216); /* Button background color */
-    color: white;                     /* Button text color */
-    border: none;                     /* Remove border */
-    border-radius: 5px;              /* Rounded corners */
-    cursor: pointer;                  /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth background transition */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+    flex: 0 0 48%;                    
+    margin: 5px;                   
+    padding: 10px;                    
+    background-color: rgb(127, 127, 216); 
+    color: white;                  
+    border: none;                     
+    border-radius: 5px;             
+    cursor: pointer;                 
+    transition: background-color 0.3s; 
 }
-
+.question-card h2{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+}
+.question-card p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+}
 .answer-button:hover {
-    background-color: rgb(100, 100, 180); /* Darker shade on hover */
+    background-color: rgb(100, 100, 180);
 }
 

@@ -1,12 +1,12 @@
 <div *ngIf="!isCompleted" class="quiz-container">
     <div class="question-card">
       <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h2>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h2>
+      <h4>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</h4>
       <p style="color: red;">Time Left: {{ timeLeft }} seconds</p> <!-- Timer display -->
     </div>
-      <h2>{{ questions[currentQuestionIndex].question }}</h2>
+      <h4>{{ questions[currentQuestionIndex].question }}</h4>
   
-      <div class="answers-container">
+      <div class="answers-container" style="font-family: 'Courier New', Courier, monospace;">
         <button *ngFor="let selectedAnswer of shuffledAnswers" 
                 class="answer-button"
                 (click)="answer(selectedAnswer)">
