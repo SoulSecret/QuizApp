@@ -1,3 +1,4 @@
+<div style="height: 100vh; background: linear-gradient(135deg, #f0f8ff 0%, #d1e0ff 100%);">
 <div *ngIf="!isCompleted" class="quiz-container">
     <div class="question-card">
       <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -21,4 +22,4 @@
     <p>Your final score is: {{ score }}/{{ questions.length }}</p>
     <button (click)="restart()" class="restart-button">Restart</button>
   </div>
-  
+</div>
