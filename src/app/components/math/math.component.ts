@@ -36,19 +36,30 @@ export class MathComponent {
   }
 
   loadQuestions() {
-    this.isLoading = true; 
-    this.errorMessage = null; 
-
-    this.quizService.getQuestions(this.categoryId).subscribe({
+    this.isLoading = true;
+    this.errorMessage = null;
+  
+    this.quizService.getQuestions().subscribe({
       next: (data) => {
         if (data && data.results && Array.isArray(data.results)) {
-          this.questions = data.results.map((question: any) => ({
-            question: this.decodeHtml(question.question),
-            correct_answer: question.correct_answer,
-            incorrect_answers: question.incorrect_answers,
-          }));
-          this.shuffleAnswers();
-          this.startTimer();
+          // Filter questions by categoryId before processing
+          const filteredQuestions = data.results.filter((question: any) => question.categoryId === this.categoryId);
+  
+          if (filteredQuestions.length > 0) {
+            // Shuffle questions after filtering
+            this.questions = this.shuffleArray(filteredQuestions.map((question: any) => ({
+              question: this.decodeHtml(question.question),
+              correct_answer: question.correct_answer,
+              incorrect_answers: question.incorrect_answers,
+            })));
+  
+            // Start with the first question
+            this.currentQuestionIndex = 0;
+            this.shuffleAnswers(); // Shuffle answers for the first question
+            this.startTimer(); // Start the timer after loading questions
+          } else {
+            this.errorMessage = 'No questions found for the selected category.';
+          }
         } else {
           this.errorMessage = 'Unexpected data structure received.';
         }
@@ -58,10 +69,19 @@ export class MathComponent {
         this.errorMessage = 'Failed to fetch questions. Please try again later.';
       },
       complete: () => {
-        this.isLoading = false; 
+        this.isLoading = false;
       }
     });
-}
+  }
+  
+  // Shuffle function
+  shuffleArray(array: any[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+  }
 
 
   decodeHtml(html: string): string {

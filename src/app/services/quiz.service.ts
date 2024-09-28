@@ -6,13 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class QuizService {
-  private apiUrl = 'https://opentdb.com/api.php';
+  // private apiUrl = 'https://opentdb.com/api.php';
+
+  // constructor(private http: HttpClient) {}
+
+  // // Method to get questions with a dynamic category ID
+  // getQuestions(categoryId: number): Observable<any> {
+  //   const url = `${this.apiUrl}?amount=10&category=${categoryId}&difficulty=medium&type=multiple`;
+  //   return this.http.get(url);
+  // }
+  private jsonFilePath = 'question.json';  // Path to the JSON file
 
   constructor(private http: HttpClient) {}
 
-  // Method to get questions with a dynamic category ID
-  getQuestions(categoryId: number): Observable<any> {
-    const url = `${this.apiUrl}?amount=10&category=${categoryId}&difficulty=medium&type=multiple`;
-    return this.http.get(url);
+  // Method to get questions from the local JSON file
+  getQuestions(): Observable<any> {
+    return this.http.get(this.jsonFilePath);
   }
 }
